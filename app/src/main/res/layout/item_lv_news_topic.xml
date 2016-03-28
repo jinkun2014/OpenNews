@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+    <me.jinkun.common.widgets.SquareImageView
+        android:id="@+id/iv_thumb"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:ratio="0.7" />
+
+    <TextView
+        android:id="@+id/tv_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_thumb"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:text="这里是新闻标题"
+        android:textColor="@color/black"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_Digest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_Title"
+        android:layout_toRightOf="@id/iv_thumb"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/gray_8f"
+        android:text="这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容" />
+</RelativeLayout>

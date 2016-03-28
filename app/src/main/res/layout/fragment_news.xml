@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".features.news.NewsFragment">
+
+
+    <LinearLayout
+        android:id="@+id/ll_Content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_public"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tl_TabTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    app:tabMinWidth="20dp"/>
+
+                <TextView
+                    android:id="@+id/tv_ItemExist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="切换栏目"
+                    android:visibility="gone"/>
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/iv_MoreItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_iv_more"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:scaleType="center"
+                android:src="@mipmap/iv_more_down"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_TabContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/ll_MoreItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_ee"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!--<com.wangyi.widget.drag.DragGridView-->
+                    <!--android:id="@+id/gv_MyNewsTopic"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:horizontalSpacing="15dp"-->
+                    <!--android:listSelector="@android:color/transparent"-->
+                    <!--android:numColumns="4"-->
+                    <!--android:paddingLeft="5dp"-->
+                    <!--android:paddingRight="5dp"-->
+                    <!--android:verticalSpacing="10dp">-->
+                <!--</com.wangyi.widget.drag.DragGridView>-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="更多栏目"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

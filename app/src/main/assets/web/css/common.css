@@ -1,0 +1,163 @@
+/* 点击按下效果 */
+*, :after, :before {
+	-webkit-tap-highlight-color: transparent;
+}
+
+.active {
+	position: relative;
+	opacity: 1;
+}
+
+.active>.mask {
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.active:active>.mask {
+	background: rgba(0, 0, 0, .5);
+}
+
+body.night .active {
+	opacity: 0.5;
+}
+/* 点击按下效果 End */
+
+/* 正文css样式 */
+@font-face {
+	font-family: 'myface';
+	src: url('/data/data/com.netease.newsreader.activity/files/regular.ttf');
+}
+
+* {
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
+}
+
+html, body, div, dl, dt, dd, h1, h2 {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #f6f6f6;
+	word-wrap: break-word;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+#article_body > p {
+	margin: 15px 4% 15px 4%;
+	line-height: 170%;
+}
+
+hr {
+	height: 2px;
+	border: 0px;
+	background: url(../line.png) repeat-x;
+}
+
+.loading {
+	text-align: center;
+}
+
+em {
+	font-style: normal;
+	font-weight: 400;
+}
+
+a {
+	color: #5091d2;
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+.contentstyle p {
+}
+
+.contentpaddingstyle {
+	padding: 0% 5%;
+}
+
+.contentstyle {
+	color: #333333;
+	font-size: 18px;
+	font-weight: normal;
+	padding: 48px 0 8px 0;
+}
+
+body.night {
+	background: #222222;
+}
+
+body.night a {
+	color: #286393;
+}
+
+body.night .contentstyle {
+	color: #999999;
+}
+/* 正文css样式 End */
+
+/* More View Common (@See AppNode | html - moreButton | html - showmore) */
+.viewMore {
+	margin: 10px 10px 5px 10px;
+	text-align: center;
+}
+
+.viewMore .viewMore-btn {
+	background: url("res/drawable-hdpi/view_more.png") no-repeat scroll right center transparent;
+	cursor: pointer;
+	left: 50%;
+	line-height: 21px;
+	margin: -10px 0 0 -30px;
+	padding-right: 18px;
+	position: absolute;
+	top: 50%;
+}
+
+.viewMore .loading {
+	display: none;
+	cursor: pointer;
+	left: 50%;
+	line-height: 21px;
+	margin: -10px 0 0 -30px;
+	padding-right: 18px;
+	position: absolute;
+	top: 50%;
+}
+
+.viewMore a {
+	-moz-border-radius: 4px 4px 4px 4px;
+	background: url("res/drawable-hdpi/view_more.png") repeat-x scroll left top transparent;
+	border: 1px solid #C2C2C2;
+	color: #484848;
+	display: block;
+	font-weight: 700;
+	height: 32px;
+	line-height: 32px;
+	outline: medium none;
+	position: relative;
+}
+/* More View Common (@See AppNode | html - moreButton | html - showmore) End */
+
+/* @See BigImageNode */
+.image_digest {
+	color: #aaaaaa;
+	text-align: left;
+	margin-bottom: 5px;
+	font-size: 14px;
+	line-height: 160%;
+	padding: 0% 4%;
+}
+
+body.night .image_digest {
+	color: #666666;
+}
+/* @See BigImageNode End */

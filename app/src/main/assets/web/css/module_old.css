@@ -1,0 +1,496 @@
+/* @See HeaderNode */
+.doc_header {
+	margin: 25px 0 8px 0;
+	padding: 0% 4%;
+}
+
+.doc_header_title {
+	color: #333333;
+	font-size: 22px;
+	line-height: 24px;
+}
+
+.doc_header .ad {
+	float: right;
+	height: 13px;
+	width: 100px;
+	margin-top: -16px;
+}
+
+.doc_header_desc {
+	margin: 8px 0 2px 0;
+	font-size: 12px;
+	line-height: 16px;
+	display: block;
+	-webkit-box-flex: 1;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	padding-right: 3px;
+	color: #aaaaaa;
+}
+
+body.night .doc_header_title {
+	color: #a8a8a8;
+}
+
+body.night .doc_header_desc {
+	color: #696969;
+}
+/* @See HeaderNode End */
+
+/* @SourceNode */
+.original_img {
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	vertical-align: middle;
+	padding-left: 2px;
+	background-image: url("../module_imgs/common/biz_news_link_arrow_blue.png");
+	background-size: 7px 7px;
+	background-repeat: no-repeat;
+}
+
+.original {
+	text-decoration: none;
+	color: #4682c5;
+	font-size: 12px;
+	display: inline-block;
+	width: 62px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	float: right;
+	margin-right: 5%;
+	padding: 0 5px;
+}
+
+body.night .original {
+	color: #125289;
+}
+
+body.night .original_img {
+	background-image: url("../module_imgs/common/night_biz_news_link_arrow_blue.png");
+}
+/* @SourceNode End */
+
+/* @See SchemeNode */
+.h1style {
+	color: #2f2f2f;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 10px 0px;
+}
+
+.h2style {
+	color: #434647;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 10px 0px;
+}
+
+.digesttagstyle {
+	margin-right: 8px;
+}
+
+.schemestartstyle {
+}
+
+.digeststyle_start {
+	border-left: #eeeeee solid 5px;
+	margin: 0px 4% 2px 4%;
+	padding: 0px 0px 0px 10px;
+	color: #7c7c7c;
+	line-height: 160%;
+	font-weight: normal;
+	font-size: 15px;
+}
+
+body.night .digeststyle_start {
+	border-left-color: #383838;
+}
+/* @See SchemeNode End */
+
+/* Link（@See LinkNode | AppLinkNode | DealerNode） Common */
+.linkstyle {
+	color: #5091d2
+}
+/* Link Common End */
+
+/* @See LinkNode */
+.border_link {
+	text-decoration: none;
+	color: #4682c5;
+	font-size: 0.8em;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.2em 0.6em 0.2em 0.8em;
+	height: 1.4em;
+	line-height: 1.4em;
+	background-color: rgba(81, 137, 200, 0.1);
+	border-radius: 0.9em;
+	margin-bottom: 0.45em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 90%;
+	margin: 0px 0px 15px
+}
+
+.border_link_span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 0.7em;
+	height: 1.4em;
+	background-image: url("../module_imgs/common/biz_news_link_arrow_blue.png");
+	background-repeat: no-repeat;
+	background-position: 50% 33%;
+	background-size: 80%;
+	margin-left: 0.2em
+}
+
+.border_light_link {
+	text-decoration: none;
+	color: #2f9d84;
+	font-size: 0.8em;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.2em 0.6em 0.2em 0.8em;
+	height: 1.4em;
+	line-height: 1.4em;
+	background-color: rgba(122, 191, 175, 0.1);
+	border-radius: 0.9em;
+	margin-bottom: 0.45em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 90%
+}
+
+.border_light_link_span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 0.7em;
+	height: 1.4em;
+	background-image: url("../module_imgs/common/biz_news_link_arrow_green.png");
+	background-repeat: no-repeat;
+	background-position: 50% 33%;
+	background-size: 80%;
+	margin-left: 0.2em
+}
+/* @See LinkNode End */
+
+/* @See AppLinkNode */
+.marBottom20 {
+	margin-bottom: 20px
+}
+
+.applinkstyle {
+	color: #ffffff;
+	text-align: center;
+}
+
+.app_downBg {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 14px;
+	color: #ffffff;
+	text-align: center;
+	padding: 2px 10px 2px 10px;
+	margin-bottom: 10px;
+	background-image: url('../download_bg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.imgcenterstyle {
+	vertical-align: middle;
+	width: 16px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+}
+
+.contentmargintyle {
+	margin: 0% 5%;
+}
+/* @See AppLinkNode End */
+
+/* @See TopicNode1 */
+.topicStyle {
+	border: #e7e7e7 solid 1px;
+	background-color: #f8f8f8;
+	margin: 10px 5% 3px 5%;
+	padding: 0px 5px 0px 5px;
+}
+
+/* @See SmallNode | SubscribeNode */
+.imgmarginstyle {
+	margin: 0 5% 3px 4%;
+}
+
+/* @See AppNode */
+.apptitle {
+	color: #464646;
+	font-size: 21px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.apptime {
+	color: #949494;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.appinfo {
+	color: #949494;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.appimgmarginstyle {
+	margin: 0 2% 3px 4%;
+}
+/* @See AppNode End */
+
+/* 经销商模块 */
+#dealer_section {
+	position: relative;
+	background: #ededed;
+	padding: 10px;
+	margin: 0 4%;
+}
+
+#dealer_section .name {
+	color: #000000;
+}
+
+#dealer_section .address {
+	color: #828282;
+	margin: 7px 0 12px 0;
+	vertical-align: middle;
+}
+
+#dealer_section .address div {
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	margin-right: 2px;
+	vertical-align: middle;
+	background-image: url("../module_imgs/dealer/biz_dealer_address_icon.png");
+	background-size: 16px 18px;
+	background-repeat: no-repeat;
+}
+
+#dealer_section .address span {
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.6);
+	line-height: 14px;
+	vertical-align: middle;
+	margin-left: 3px;
+}
+
+#dealer_section .bottom {
+	width: 100%;
+	height: 20px;
+	margin-bottom: 8px;
+}
+
+#dealer_section .phone {
+	background: #39aa73;
+	color: #ffffff;
+	float: left;
+	border-radius: 15px;
+	padding: 6px 8px 5px 8px;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+#dealer_section .phone > div {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-right: 4px;
+	background-image: url("../module_imgs/dealer/biz_dealer_phone_icon.png");
+	background-size: 12px 12px;
+	background-repeat: no-repeat
+}
+
+#dealer_section .ext {
+	float: left;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.6);
+	margin-left: 9px;
+	line-height: 16px;
+	margin-top: 5px;
+}
+
+#dealer_section .authentication {
+	float: right;
+	color: #df3031;
+	font-size: 14px;
+	line-height: 16px;
+	margin-top: 4px;
+	border-color: #e7a1a2;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	padding: 1px 3px 1px 3px;
+}
+
+#dealer_section .price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    color: #df3031;
+    margin: 8px 10px 0 0;
+}
+
+#dealer_section .price > span {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-left: 2px;
+}
+
+/* 夜间 */
+body.night #dealer_section .name {
+	color: #999999;
+}
+
+body.night #dealer_section {
+	background: #222222;
+}
+
+body.night #dealer_section .price {
+	color: #6f1818;
+}
+
+body.night #dealer_section .price > span {
+	color: #8d8d8d;
+}
+
+body.night #dealer_section .address div {
+	background-image: url("../module_imgs/dealer/night_biz_dealer_address_icon.png");
+}
+
+body.night #dealer_section .address > span {
+	color: #8d8d8d;
+}
+
+body.night #dealer_section .phone {
+	background: #1c5539;
+	color: #999999;
+}
+
+body.night #dealer_section .phone > div {
+	background-image: url("../module_imgs/dealer/night_biz_dealer_phone_icon.png");
+}
+
+body.night #dealer_section .authentication {
+	color: #6f1818;
+	border-color: #411e1e;
+}
+
+body.night #dealer_section .ext {
+	color: #8d8d8d;
+}
+/* 经销商模块 End */
+
+/* @See Old AdNode */
+.ad_title {
+	text-align: center left;
+	margin: 8px 0px;
+	padding: 0px 0px;
+	color: #5091d2;
+}
+
+.ad_subtitle {
+	color: #f0f0f0;
+	font-size: 70%;
+	background-color: #4d86c6;
+	margin-right: 0.4em;
+	padding: 1px 0.25em 1px 0.3em;
+	vertical-align: top;
+}
+
+.ad_subtitle_more {
+	color: #f0f0f0;
+	font-size: 70%;
+	margin-right: 0.4em;
+	padding: 1px 0.25em 1px 0.3em;
+	vertical-align: top;
+	visibility: hidden;
+}
+/* @See AdNode End */
+
+/* Segments */
+.segments_section {
+	display: inline-block;
+	float: left;
+	height: 24px;
+	margin-left: 5%;
+}
+
+.segments_section > div {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	margin-right: 20px;
+}
+
+.segments_section > div > div {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	vertical-align: middle;
+	margin: -7px 5px 0 0;
+	background-size: 17px 17px;
+	background-repeat: no-repeat;
+}
+
+.segments_section > div > span {
+	color: #666666;
+	font-size: 12px;
+}
+
+#duanzi_ding_icon {
+	margin: -6px 5px 0 0;
+	background-image: url("../module_imgs/segments/biz_news_list_other_segments_support.png");
+}
+
+#duanzi_ding_icon[selected] {
+	background-image: url("../module_imgs/segments/biz_news_list_other_segments_support_done.png");
+}
+
+#duanzi_cai_icon {
+	margin: 6px 5px 0 0;
+	background-image: url("../module_imgs/segments/biz_news_list_other_segments_tread.png");
+}
+
+#duanzi_cai_icon[selected] {
+	background-image: url("../module_imgs/segments/biz_news_list_other_segments_tread_done.png");
+}
+
+body.night .segments_section > div > span {
+	color: #666666;
+}
+
+body.night #duanzi_ding_icon {
+	background-image: url("../module_imgs/segments/night_biz_news_list_other_segments_support.png");
+}
+
+body.night #duanzi_ding_icon[selected] {
+	background-image: url("../module_imgs/segments/night_biz_news_list_other_segments_support_done.png");
+}
+
+body.night #duanzi_cai_icon {
+	background-image: url("../module_imgs/segments/night_biz_news_list_other_segments_tread.png");
+}
+
+body.night #duanzi_cai_icon[selected] {
+	background-image: url("../module_imgs/segments/night_biz_news_list_other_segments_tread_done.png");
+}
+/* Segments End */
