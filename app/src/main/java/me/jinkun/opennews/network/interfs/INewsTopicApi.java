@@ -1,4 +1,4 @@
-package me.jinkun.opennews.network;
+package me.jinkun.opennews.network.interfs;
 
 import java.util.List;
 import java.util.Map;

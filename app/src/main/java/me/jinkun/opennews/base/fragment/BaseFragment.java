@@ -3,6 +3,7 @@ package me.jinkun.opennews.base.fragment;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +17,8 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseFragment extends Fragment {
     protected Activity mActivity;
-    private Bundle savedInstanceState;
+    protected View root;
+    protected Bundle savedInstanceState;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,10 +30,10 @@ public abstract class BaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(getLayoutId(), container, false);
-        ButterKnife.bind(this, view);
-        init(view,savedInstanceState);
-        return view;
+        root = inflater.inflate(getLayoutId(), container, false);
+        ButterKnife.bind(this, root);
+        init(root, savedInstanceState);
+        return root;
     }
 
     @Override
@@ -44,4 +46,13 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract void init(View view, Bundle savedInstanceState);
 
+    public void showTips(String msg) {
+        Snackbar.make(root, msg, Snackbar.LENGTH_LONG)
+                .setAction("确定", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                }).show();
+    }
 }

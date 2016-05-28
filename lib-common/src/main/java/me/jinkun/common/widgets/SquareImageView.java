@@ -9,7 +9,7 @@ import me.jinkun.common.R;
 
 
 /**
- * Description: ratio=1
+ * Description: 带比例的ImageView ratio=1
  * Author: Created by jinkun on 2015/7/31.
  */
 public class SquareImageView extends ImageView {
@@ -27,9 +27,9 @@ public class SquareImageView extends ImageView {
     public SquareImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        if(attrs != null){
-            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SquareImage);
-            ratio = a.getFloat(R.styleable.SquareImage_ratio, 1f);
+        if (attrs != null) {
+            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SquareImageView);
+            ratio = a.getFloat(R.styleable.SquareImageView_siv_ratio, 1f);
             a.recycle();
         }
     }
@@ -37,6 +37,6 @@ public class SquareImageView extends ImageView {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        setMeasuredDimension(getMeasuredWidth(), (int)(getMeasuredWidth() * ratio));
+        setMeasuredDimension(getMeasuredWidth(), (int) (getMeasuredWidth() * ratio));
     }
 }

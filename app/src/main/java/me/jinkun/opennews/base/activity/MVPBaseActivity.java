@@ -18,12 +18,12 @@ public abstract class MVPBaseActivity<V, T extends AbsBasePresenter<V>> extends 
 
     @Override
     protected void init(View view, Bundle savedInstanceState) {
-        //初始化布局
-        initView(view);
-
         //初始化业务类
         mPresenter = createPresenter();
         mPresenter.attachView((V) this);
+
+        //初始化布局
+        initView(view);
 
         //初始化数据
         initData(savedInstanceState);

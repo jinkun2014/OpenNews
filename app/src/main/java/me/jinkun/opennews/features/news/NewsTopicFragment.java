@@ -108,7 +108,6 @@ public class NewsTopicFragment extends MVPBaseFragment<INewsTopicView, NewsTopic
         mNewsTopicAdapter.notifyDataSetChanged();
 
         if (mRefresh.isRefreshing()) {
-//            mRefresh.refreshComplete();
             mRefresh.setRefreshing(false);
         }
     }

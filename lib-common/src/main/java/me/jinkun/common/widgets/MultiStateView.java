@@ -82,6 +82,14 @@ public class MultiStateView extends FrameLayout {
             emptyViewResId = R.layout.msv_empty_view;
         }
         mEmptyView = mInflater.inflate(emptyViewResId, this, false);
+        mEmptyView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mOnStateClickListener!=null) {
+                    mOnStateClickListener.onEmptyClick(v);
+                }
+            }
+        });
         addView(mEmptyView, mEmptyView.getLayoutParams());
 
         int errorViewResId = a.getResourceId(R.styleable.MultiStateView_msv_errorView, -1);
@@ -89,6 +97,14 @@ public class MultiStateView extends FrameLayout {
             errorViewResId = R.layout.msv_error_view;
         }
         mErrorView = mInflater.inflate(errorViewResId, this, false);
+        mEmptyView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mOnStateClickListener!=null) {
+                    mOnStateClickListener.onErrorClick(v);
+                }
+            }
+        });
         addView(mErrorView, mErrorView.getLayoutParams());
 
         int viewState = a.getInt(R.styleable.MultiStateView_msv_viewState, VIEW_STATE_CONTENT);
@@ -357,5 +373,17 @@ public class MultiStateView extends FrameLayout {
      */
     public void setViewForState(@LayoutRes int layoutRes, @ViewState int state) {
         setViewForState(layoutRes, state, false);
+    }
+
+    private OnStateClickListener mOnStateClickListener;
+
+    public void setOnStateClickListener(OnStateClickListener onStateClickListener) {
+        mOnStateClickListener = onStateClickListener;
+    }
+
+    public interface OnStateClickListener {
+        void onEmptyClick(View view);
+
+        void onErrorClick(View view);
     }
 }

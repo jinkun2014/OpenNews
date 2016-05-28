@@ -9,7 +9,6 @@ import me.jinkun.common.cache.DiskLruCacheUtil;
 import me.jinkun.opennews.base.MyApp;
 import me.jinkun.opennews.base.presenter.AbsBasePresenter;
 import me.jinkun.opennews.domain.NewsTopic;
-import me.jinkun.opennews.features.news.bean.NewsRead;
 import me.jinkun.opennews.features.news.model.NewsTopicModel;
 import me.jinkun.opennews.features.news.view.INewsTopicView;
 import rx.Observable;
@@ -168,15 +167,13 @@ public class NewsTopicPresenter extends AbsBasePresenter<INewsTopicView> {
     }
 
     public void setIsRead(NewsTopic newsTopic) {
-        NewsRead newsRead = NewsTopicModel.getInstance().getByTopicId(newsTopic.getDocid());
-        if (newsRead == null) {
-            newsRead = new NewsRead(null, newsTopic.getDocid(), NewsRead.READ_YES);
-            NewsTopicModel.getInstance().saveNewsRead(newsRead);
+        boolean isRead = NewsTopicModel.getInstance().isRead(newsTopic);
+        if (!isRead) {
+            NewsTopicModel.getInstance().setIsRead(newsTopic);
         }
     }
 
     public boolean checkIsRead(NewsTopic newsTopic) {
-        NewsRead newsRead = NewsTopicModel.getInstance().getByTopicId(newsTopic.getDocid());
-        return newsRead != null;
+        return NewsTopicModel.getInstance().isRead(newsTopic);
     }
 }

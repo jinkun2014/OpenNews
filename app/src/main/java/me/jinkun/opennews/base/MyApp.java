@@ -7,9 +7,7 @@ import android.os.Looper;
 import java.util.ArrayList;
 import java.util.List;
 
-import me.jinkun.common.utils.SPUtil;
 import me.jinkun.opennews.base.activity.BaseActivity;
-import me.jinkun.opennews.database.dao.DaoManager;
 
 /**
  * Created by jinkun on 2015/8/28.
@@ -60,14 +58,9 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         initApp();
-
-        //初始化GreenDao
-        DaoManager.initGreenDao(this);
     }
 
     private void initApp() {
-        SPUtil.context = this;
-
         mHandler = new Handler(Looper.getMainLooper());
     }
 }

@@ -1,4 +1,4 @@
-package me.jinkun.common.holder;
+package me.jinkun.common.listview.holder;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import me.jinkun.common.adapter.ListBaseAdapter;
+import me.jinkun.common.listview.adapter.ListBaseAdapter;
 
 
 public class MoreHolder extends BaseHolder {

@@ -17,11 +17,11 @@ public class T {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
 
-    private static Toast cancelToast() {
+    private static void cancelToast() {
         if (toast != null) {
             toast.cancel();
+            toast = null;
         }
-        return toast;
     }
 
     /**

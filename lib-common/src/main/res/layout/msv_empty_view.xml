@@ -2,11 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:gravity="center"
               android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="错误页面"/>
+        android:text="加载为空"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btn_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_retry"
+        android:text="点击重试"
+        android:textSize="16sp"
+        android:visibility="gone"/>
 </LinearLayout>

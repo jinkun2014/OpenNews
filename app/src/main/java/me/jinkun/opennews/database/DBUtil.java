@@ -1,4 +1,4 @@
-package me.jinkun.opennews.database.db;
+package me.jinkun.opennews.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -31,10 +31,10 @@ public class DBUtil {
     }
 
     public static SQLiteDatabase getWritableDatabase() {
-        return getInstance(MyApp.getInstance().getApplicationContext()).mSQLHelp.getWritableDatabase();
+        return getInstance(MyApp.getInstance()).mSQLHelp.getWritableDatabase();
     }
 
     public static SQLiteDatabase getReadableDatabase() {
-        return getInstance(MyApp.getInstance().getApplicationContext()).mSQLHelp.getReadableDatabase();
+        return getInstance(MyApp.getInstance()).mSQLHelp.getReadableDatabase();
     }
 }

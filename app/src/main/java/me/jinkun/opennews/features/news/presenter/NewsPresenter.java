@@ -6,7 +6,7 @@ import java.util.List;
 import me.jinkun.opennews.base.presenter.AbsBasePresenter;
 import me.jinkun.opennews.features.news.NewsTopicFragment;
 import me.jinkun.opennews.features.news.bean.NewsChannel;
-import me.jinkun.opennews.features.news.model.NewsModel;
+import me.jinkun.opennews.features.news.model.NewsChannelModel;
 import me.jinkun.opennews.features.news.view.INewsView;
 import rx.Observable;
 import rx.Subscriber;
@@ -30,7 +30,6 @@ public class NewsPresenter extends AbsBasePresenter<INewsView> {
 
         getView().showDialog();
 
-        //使用RxJava替换原来的
         subscribe = Observable
                 .create(new Observable.OnSubscribe<List<NewsChannel>>() {
                     @Override
@@ -44,10 +43,12 @@ public class NewsPresenter extends AbsBasePresenter<INewsView> {
                     }
                 })//
                 .subscribeOn(Schedulers.io())//
-                .observeOn(Schedulers.computation())//
                 .map(new Func1<List<NewsChannel>, List<NewsTopicFragment>>() {
                     @Override
                     public List<NewsTopicFragment> call(List<NewsChannel> newsChannelList) {
+                        if (newsChannelList == null) {
+                            return null;
+                        }
                         return channels2NewsTopicFragments(newsChannelList);
                     }
                 })//
@@ -85,11 +86,11 @@ public class NewsPresenter extends AbsBasePresenter<INewsView> {
     }
 
     private List<NewsChannel> loadChannelsFromNet() {
-        return NewsModel.getInstance().loadChannelsFromNet();
+        return null;
     }
 
     private List<NewsChannel> loadChannelsFromLocal() {
-        return NewsModel.getInstance().loadChannelsFromLocal();
+        return NewsChannelModel.getInstance().loadChannelsFromLocal();
     }
 
     @Override

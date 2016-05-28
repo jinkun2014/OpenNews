@@ -1,16 +1,16 @@
-package me.jinkun.common.adapter;
+package me.jinkun.common.listview.adapter;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import me.jinkun.common.holder.BaseHolder;
-import me.jinkun.common.holder.MoreHolder;
-import me.jinkun.common.manager.ThreadManager;
-import me.jinkun.common.thread.ThreadHelper;
-
 import java.util.List;
+
+import me.jinkun.common.listview.holder.BaseHolder;
+import me.jinkun.common.listview.holder.MoreHolder;
+import me.jinkun.common.thread.ThreadHelper;
+import me.jinkun.common.thread.manager.ThreadManager;
 
 /**
  * Description: 对BaseAdapter的封装适用于ListView <br/>

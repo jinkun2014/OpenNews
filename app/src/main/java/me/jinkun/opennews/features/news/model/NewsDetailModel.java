@@ -8,7 +8,7 @@ import me.jinkun.opennews.base.MyApp;
 import me.jinkun.opennews.base.model.AbsModel;
 import me.jinkun.opennews.domain.NewsDetail;
 import me.jinkun.opennews.network.ApiServiceManager;
-import me.jinkun.opennews.network.INewsTopicApi;
+import me.jinkun.opennews.network.interfs.INewsTopicApi;
 import retrofit2.Call;
 import retrofit2.Response;
 

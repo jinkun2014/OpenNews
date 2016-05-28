@@ -70,8 +70,6 @@ public class NewsFragment extends MVPBaseFragment<INewsView, NewsPresenter> impl
     private void initToolbar() {
         mToolbar.setTitle("新闻");
         ((HomeActivity) mActivity).setSupportActionBar(mToolbar);
-//        // 返回按钮
-//        ((HomeActivity) mActivity).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -90,7 +88,6 @@ public class NewsFragment extends MVPBaseFragment<INewsView, NewsPresenter> impl
     private void initPagerData() {
         mNewsTopicFragmentList = new ArrayList<>();
         mAdapter = new NewsChannelAdapter(getChildFragmentManager(), mNewsTopicFragmentList);
-
         mVpTabContent.setAdapter(mAdapter);
 
         //设置TabLayout文本在选中和为选中时候的颜色
@@ -102,13 +99,9 @@ public class NewsFragment extends MVPBaseFragment<INewsView, NewsPresenter> impl
 
         myOnPageChangeListener = new MyOnPageChangeListener();
         mVpTabContent.addOnPageChangeListener(myOnPageChangeListener);
-
-        //加载数据
-        mPresenter.loadNewsTopicData();
     }
 
     private void initListener() {
-
         mIvMoreItem.setOnClickListener(new View.OnClickListener() {
             //是否展开频道列表
             boolean isDown;
@@ -150,6 +143,11 @@ public class NewsFragment extends MVPBaseFragment<INewsView, NewsPresenter> impl
         });
     }
 
+    public void beginLoad() {
+        //加载数据
+        mPresenter.loadNewsTopicData();
+    }
+
     @Override
     public void showDialog() {
         L.dStart("等待加载 NewsTopicList");
@@ -160,20 +158,18 @@ public class NewsFragment extends MVPBaseFragment<INewsView, NewsPresenter> impl
         L.dEnd("NewsTopicList 加载完毕");
     }
 
-    @Override
-    public void beginLoad() {
-
-    }
 
     @Override
     public void onLoadSuccess(List<NewsTopicFragment> newsTopicFragmentList) {
+        if (newsTopicFragmentList == null) {
+            showTips("加载数据错误！");
+            return;
+        }
+
         //刷新ViewPager
         mNewsTopicFragmentList.clear();
         mNewsTopicFragmentList.addAll(newsTopicFragmentList);
         mAdapter.notifyDataSetChanged();
-
-        //更新TabLayout
-        //mTlTabTitle.setTabsFromPagerAdapter(mAdapter);
 
         //默认选中第一页
         ViewTreeObserver viewTreeObserver = mVpTabContent.getViewTreeObserver();

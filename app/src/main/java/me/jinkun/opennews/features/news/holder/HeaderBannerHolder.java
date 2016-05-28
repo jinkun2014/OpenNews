@@ -7,14 +7,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import me.jinkun.common.holder.BaseHolder;
-import me.jinkun.common.thread.ThreadHelper;
-import me.jinkun.opennews.domain.NewsAds;
-import me.jinkun.opennews.domain.NewsTopic;
-import me.jinkun.opennews.helper.Bus;
-import me.jinkun.opennews.widgets.NetworkImageHolderView;
-import me.jinkun.common.utils.L;
-import me.jinkun.common.utils.T;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
@@ -26,6 +18,14 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import me.jinkun.common.listview.holder.BaseHolder;
+import me.jinkun.common.thread.ThreadHelper;
+import me.jinkun.common.utils.L;
+import me.jinkun.common.utils.T;
+import me.jinkun.opennews.domain.NewsAds;
+import me.jinkun.opennews.domain.NewsTopic;
+import me.jinkun.opennews.helper.Bus;
+import me.jinkun.opennews.widgets.NetworkImageHolderView;
 
 /**
  * Description: Do one thing at a time, and do well.<br/>

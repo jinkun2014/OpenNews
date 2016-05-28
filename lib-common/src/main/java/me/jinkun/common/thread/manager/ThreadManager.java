@@ -1,4 +1,4 @@
-package me.jinkun.common.manager;
+package me.jinkun.common.thread.manager;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;

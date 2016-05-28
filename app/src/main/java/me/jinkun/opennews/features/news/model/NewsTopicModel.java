@@ -6,15 +6,12 @@ import java.util.Map;
 
 import me.jinkun.common.cache.DiskLruCacheUtil;
 import me.jinkun.common.utils.L;
+import me.jinkun.common.utils.SPUtil;
 import me.jinkun.opennews.base.MyApp;
 import me.jinkun.opennews.base.model.AbsModel;
-import me.jinkun.opennews.database.dao.DaoManager;
-import me.jinkun.opennews.database.dao.DaoSession;
-import me.jinkun.opennews.database.dao.NewsReadDao;
 import me.jinkun.opennews.domain.NewsTopic;
-import me.jinkun.opennews.features.news.bean.NewsRead;
 import me.jinkun.opennews.network.ApiServiceManager;
-import me.jinkun.opennews.network.INewsTopicApi;
+import me.jinkun.opennews.network.interfs.INewsTopicApi;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -47,17 +44,11 @@ public class NewsTopicModel extends AbsModel {
     }
 
 
-    public NewsRead getByTopicId(String id) {
-        DaoSession daoSession = DaoManager.newSession();
-        NewsReadDao mNewsReadDao = daoSession.getNewsReadDao();
-        NewsRead newsRead = mNewsReadDao.queryBuilder().where(NewsReadDao.Properties.Docid.eq(id)).unique();
-        return newsRead;
+    public boolean isRead(NewsTopic newsTopic) {
+        return (boolean) SPUtil.get(MyApp.getInstance(), newsTopic.getDocid(), false);
     }
 
-    public void saveNewsRead(NewsRead newsRead) {
-        DaoSession daoSession = DaoManager.newSession();
-        NewsReadDao mNewsReadDao = daoSession.getNewsReadDao();
-        mNewsReadDao.insert(newsRead);
+    public void setIsRead(NewsTopic newsTopic) {
+        SPUtil.put(MyApp.getInstance(), newsTopic.getDocid(), true);
     }
-
 }

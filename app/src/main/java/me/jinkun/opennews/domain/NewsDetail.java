@@ -8,6 +8,8 @@ import android.webkit.JavascriptInterface;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import me.jinkun.common.utils.L;
 // KEEP INCLUDES END
 
 
@@ -94,6 +96,15 @@ public class NewsDetail implements java.io.Serializable {
     @JavascriptInterface
     public void setImg(List<NewsImage> img) {
         this.img = img;
+    }
+
+    @JavascriptInterface
+    public void requestImgLoading(String start, String end) {
+        L.e("start --> " + start + ",end --> " + end);
+    }
+    @JavascriptInterface
+    public int getTextSize(){
+        return 2;
     }
     // KEEP METHODS END
 

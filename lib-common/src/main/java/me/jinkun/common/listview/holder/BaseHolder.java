@@ -1,4 +1,4 @@
-package me.jinkun.common.holder;
+package me.jinkun.common.listview.holder;
 
 import android.content.Context;
 import android.view.View;

@@ -13,8 +13,6 @@ public interface INewsView {
 
     public void hideDialog();
 
-    public void beginLoad();
-
     public void onLoadSuccess(List<NewsTopicFragment> newsTopicFragmentList);
 
 }
