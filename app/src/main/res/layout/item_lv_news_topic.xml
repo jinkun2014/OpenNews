@@ -9,7 +9,7 @@
         android:id="@+id/iv_thumb"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        app:siv_ratio="0.7" />
+        app:siv_ratio="0.7"/>
 
     <TextView
         android:id="@+id/tv_Title"
@@ -20,7 +20,8 @@
         android:paddingLeft="10dp"
         android:text="这里是新闻标题"
         android:textColor="@color/black"
-        android:textStyle="normal" />
+        android:textSize="13sp"
+        android:textStyle="normal"/>
 
     <TextView
         android:id="@+id/tv_Digest"
@@ -28,10 +29,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_Title"
         android:layout_toRightOf="@id/iv_thumb"
-        android:paddingLeft="10dp"
-        android:paddingTop="5dp"
         android:lineSpacingExtra="3dp"
         android:lineSpacingMultiplier="1.2"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容"
         android:textColor="@color/gray_8f"
-        android:text="这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容" />
+        android:textSize="13sp"/>
 </RelativeLayout>

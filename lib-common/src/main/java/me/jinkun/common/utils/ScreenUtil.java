@@ -18,7 +18,7 @@ public class ScreenUtil {
     }
 
     /**
-     * Description: 获得屏幕高度 <br/>
+     * Description: 获得屏幕宽度 <br/>
      * Autor: Created by jinkun on 2016/3/8.
      */
     public static int getScreenWidth(Context context) {
@@ -29,7 +29,7 @@ public class ScreenUtil {
     }
 
     /**
-     * Description: 获得屏幕宽度 <br/>
+     * Description: 获得屏幕高度  <br/>
      * Autor: Created by jinkun on 2016/3/8.
      */
     public static int getScreenHeight(Context context) {

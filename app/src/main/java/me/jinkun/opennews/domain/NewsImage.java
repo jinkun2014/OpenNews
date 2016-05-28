@@ -14,7 +14,7 @@ public class NewsImage implements java.io.Serializable {
     private String alt;
      /*图片像素*/
     private String pixel;
-     /*图片应用*/
+     /*图片引用<!--IMG#0-->*/
     private String ref;
      /*图片地址*/
     private String src;

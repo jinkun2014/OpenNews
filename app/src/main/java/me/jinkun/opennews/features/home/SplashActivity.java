@@ -3,6 +3,8 @@ package me.jinkun.opennews.features.home;
 import android.content.Intent;
 import android.os.Bundle;
 
+import me.jinkun.common.utils.L;
+import me.jinkun.common.utils.ScreenUtil;
 import me.jinkun.opennews.R;
 import me.jinkun.opennews.base.MyApp;
 import me.jinkun.opennews.base.activity.MVPBaseActivity;
@@ -42,5 +44,6 @@ public class SplashActivity extends MVPBaseActivity<ISplashView, SplashPresenter
                 finish();
             }
         }, 2000);
+        L.e("width -->" + ScreenUtil.getScreenWidth(MyApp.getInstance()));
     }
 }
