@@ -5,8 +5,8 @@ import java.util.Map;
 
 import me.jinkun.opennews.domain.NewsDetail;
 import me.jinkun.opennews.domain.NewsTopic;
-import retrofit.http.GET;
-import retrofit.http.Path;
+import retrofit2.http.GET;
+import retrofit2.http.Path;
 import rx.Observable;
 
 /**

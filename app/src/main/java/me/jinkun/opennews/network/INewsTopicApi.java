@@ -1,14 +1,14 @@
 package me.jinkun.opennews.network;
 
-import me.jinkun.opennews.domain.NewsDetail;
-import me.jinkun.opennews.domain.NewsTopic;
-
 import java.util.List;
 import java.util.Map;
 
-import retrofit.Call;
-import retrofit.http.GET;
-import retrofit.http.Path;
+import me.jinkun.opennews.domain.NewsDetail;
+import me.jinkun.opennews.domain.NewsTopic;
+import retrofit2.Call;
+import retrofit2.http.GET;
+import retrofit2.http.Path;
+
 
 /**
  * Description: Do one thing at a time, and do well.<br/>

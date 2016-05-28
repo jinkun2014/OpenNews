@@ -93,14 +93,18 @@ public class NewsFragment extends MVPBaseFragment<INewsView, NewsPresenter> impl
 
         mVpTabContent.setAdapter(mAdapter);
 
-        mTlTabTitle.setTabTextColors(Color.GRAY, Color.RED);//设置文本在选中和为选中时候的颜色
-        //用来设置tab的，同时也要覆写  PagerAdapter 的 CharSequence getPageTitle(int position) 方法，要不然 Tab 没有 title
+        //设置TabLayout文本在选中和为选中时候的颜色
+        mTlTabTitle.setTabTextColors(Color.GRAY, Color.RED);
+        //设置TabLayout的tab选项的，同时也要覆写  PagerAdapter 的 CharSequence getPageTitle(int position) 方法，要不然 Tab 没有 title
         mTlTabTitle.setupWithViewPager(mVpTabContent);
-        mTlTabTitle.setTabsFromPagerAdapter(mAdapter);
+        //设置TabLayout文本的滑动模式
         mTlTabTitle.setTabMode(TabLayout.MODE_SCROLLABLE);
 
         myOnPageChangeListener = new MyOnPageChangeListener();
         mVpTabContent.addOnPageChangeListener(myOnPageChangeListener);
+
+        //加载数据
+        mPresenter.loadNewsTopicData();
     }
 
     private void initListener() {
@@ -158,8 +162,7 @@ public class NewsFragment extends MVPBaseFragment<INewsView, NewsPresenter> impl
 
     @Override
     public void beginLoad() {
-        //加载数据
-        mPresenter.loadNewsTopicData();
+
     }
 
     @Override
@@ -170,7 +173,7 @@ public class NewsFragment extends MVPBaseFragment<INewsView, NewsPresenter> impl
         mAdapter.notifyDataSetChanged();
 
         //更新TabLayout
-        mTlTabTitle.setTabsFromPagerAdapter(mAdapter);
+        //mTlTabTitle.setTabsFromPagerAdapter(mAdapter);
 
         //默认选中第一页
         ViewTreeObserver viewTreeObserver = mVpTabContent.getViewTreeObserver();

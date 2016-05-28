@@ -7,10 +7,10 @@ import me.jinkun.common.cache.DiskLruCacheUtil;
 import me.jinkun.opennews.base.MyApp;
 import me.jinkun.opennews.base.model.AbsModel;
 import me.jinkun.opennews.domain.NewsDetail;
+import me.jinkun.opennews.network.ApiServiceManager;
 import me.jinkun.opennews.network.INewsTopicApi;
-import me.jinkun.opennews.network.RetrofitSingleton;
-import retrofit.Call;
-import retrofit.Response;
+import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * Description: Do one thing at a time, and do well.<br/>
@@ -22,7 +22,7 @@ public class NewsDetailModel extends AbsModel {
     }
 
     public NewsDetail loadDetailFromNet(String docid) {
-        INewsTopicApi instance = RetrofitSingleton.getInstance(INewsTopicApi.class);
+        INewsTopicApi instance = ApiServiceManager.getApiService(INewsTopicApi.class);
         Call<Map<String, NewsDetail>> call = instance.listNewsDetail(docid);
         try {
             Response<Map<String, NewsDetail>> resp = call.execute();

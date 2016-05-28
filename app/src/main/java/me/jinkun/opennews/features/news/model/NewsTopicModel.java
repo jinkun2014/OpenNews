@@ -13,10 +13,10 @@ import me.jinkun.opennews.database.dao.DaoSession;
 import me.jinkun.opennews.database.dao.NewsReadDao;
 import me.jinkun.opennews.domain.NewsTopic;
 import me.jinkun.opennews.features.news.bean.NewsRead;
+import me.jinkun.opennews.network.ApiServiceManager;
 import me.jinkun.opennews.network.INewsTopicApi;
-import me.jinkun.opennews.network.RetrofitSingleton;
-import retrofit.Call;
-import retrofit.Response;
+import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * Description: Do one thing at a time, and do well.<br/>
@@ -30,7 +30,7 @@ public class NewsTopicModel extends AbsModel {
     public List<NewsTopic> loadDataFromNet(String tid, int start, int end) {
         L.e("http://c.m.163.com/nc/article/list/" + tid + "/" + start + "-" + end + ".html");
         try {
-            INewsTopicApi mNewsChannelApi = RetrofitSingleton.getInstance(INewsTopicApi.class);
+            INewsTopicApi mNewsChannelApi = ApiServiceManager.getApiService(INewsTopicApi.class);
             Call<Map<String, List<NewsTopic>>> newsTopicCall = mNewsChannelApi.listTopics(tid, start, end);
             Response<Map<String, List<NewsTopic>>> execute = newsTopicCall.execute();
             Map<String, List<NewsTopic>> body = execute.body();
