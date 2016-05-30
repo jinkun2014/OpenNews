@@ -1386,3 +1386,11 @@
             }
         }
     }
+
+    /** 加载图片 */
+    function loadImages(index,src) {
+        if (window.news) {
+          var img = document.getElementById("img_"+index);
+          img.src=src;
+        }
+    }

@@ -10,6 +10,7 @@ import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import butterknife.Bind;
 import me.jinkun.opennews.R;
@@ -58,6 +59,9 @@ public class NewsDetailActivity extends MVPBaseActivity<INewsDetailView, NewsDet
         //设置允许使用js
         settings.setJavaScriptEnabled(true);
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
+        //设置允许访问本地文件
+        settings.setAllowFileAccess(true);
+        mWvNewsDetails.setWebViewClient(new MyWebViewClient(newsDetail));
         mWvNewsDetails.setWebChromeClient(new MyWebChromeClient());
         // 添加一个对象, 让JS可以访问该对象的方法, 该对象中可以调用JS中的方法
         mWvNewsDetails.addJavascriptInterface(newsDetail, "news");
@@ -84,5 +88,24 @@ public class NewsDetailActivity extends MVPBaseActivity<INewsDetailView, NewsDet
             finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private class MyWebViewClient extends WebViewClient {
+
+        private NewsDetail mNewsDetail;
+
+        public MyWebViewClient(NewsDetail newsDetail) {
+            this.mNewsDetail = newsDetail;
+        }
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+
+            //当页面加载完再去加载图片
+            for (int i = 0; i < mNewsDetail.getImg().size(); i++) {
+                String src = mNewsDetail.getImg().get(i).getSrc();
+                view.loadUrl("javascript:loadImages(" + i + ",'" +src+ "')");
+            }
+        }
     }
 }

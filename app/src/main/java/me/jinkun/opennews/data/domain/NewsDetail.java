@@ -64,8 +64,13 @@ public class NewsDetail implements java.io.Serializable {
 
     @JavascriptInterface
     public String getBody() {
-        for (NewsImage image : img) {
-            body = body.replace(image.getRef(), "<img src='" + image.getSrc() + "' width='"+100+"%'/>");
+        //这里先使用本地图片占位，然后图片加载完了替换原来的占位的图片
+        //<img id="img_0" src="file:///android_asset/web/no_loading.png"/>
+        for (int i = 0; i < img.size(); i++) {
+            NewsImage newsImage = img.get(i);
+            L.e("img_" + i + " --> " + newsImage.getSrc());
+            String imgTag = "<img id='img_" + i + "' src='file:///android_asset/web/no_loading.png' width='100%'/>";
+            body = body.replace(newsImage.getRef(), imgTag);
         }
         return body;
     }
@@ -116,7 +121,7 @@ public class NewsDetail implements java.io.Serializable {
     public static class Image {
         //        "alt": "",
 //        "pixel": "550*309",
-//        "ref": "",
+//        "ref": "<!--IMG#0-->",
 //        "src":
         private String alt;
         private String pixel;
