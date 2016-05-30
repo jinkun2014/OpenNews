@@ -27,7 +27,7 @@ import me.jinkun.opennews.features.home.HomeActivity;
 import me.jinkun.opennews.features.news.adapter.NewsChannelAdapter;
 import me.jinkun.opennews.features.news.presenter.NewsPresenter;
 import me.jinkun.opennews.features.news.view.INewsView;
-import me.jinkun.opennews.helper.Bus;
+import me.jinkun.opennews.util.Bus;
 
 /**
  * Description: 新闻模块的主页<br/>

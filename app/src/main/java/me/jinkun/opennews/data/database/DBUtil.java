@@ -1,4 +1,4 @@
-package me.jinkun.opennews.database;
+package me.jinkun.opennews.data.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

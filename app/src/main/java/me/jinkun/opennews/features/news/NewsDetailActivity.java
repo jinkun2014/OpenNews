@@ -14,8 +14,8 @@ import android.webkit.WebView;
 import butterknife.Bind;
 import me.jinkun.opennews.R;
 import me.jinkun.opennews.base.activity.MVPBaseActivity;
-import me.jinkun.opennews.domain.NewsDetail;
-import me.jinkun.opennews.domain.NewsTopic;
+import me.jinkun.opennews.data.domain.NewsDetail;
+import me.jinkun.opennews.data.domain.NewsTopic;
 import me.jinkun.opennews.features.news.presenter.NewsDetailPresenter;
 import me.jinkun.opennews.features.news.view.INewsDetailView;
 

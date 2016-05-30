@@ -1,10 +1,10 @@
-package me.jinkun.opennews.network.interfs;
+package me.jinkun.opennews.data.network.interfs;
 
 import java.util.List;
 import java.util.Map;
 
-import me.jinkun.opennews.domain.NewsDetail;
-import me.jinkun.opennews.domain.NewsTopic;
+import me.jinkun.opennews.data.domain.NewsDetail;
+import me.jinkun.opennews.data.domain.NewsTopic;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

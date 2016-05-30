@@ -22,9 +22,9 @@ import me.jinkun.common.listview.holder.BaseHolder;
 import me.jinkun.common.thread.ThreadHelper;
 import me.jinkun.common.utils.L;
 import me.jinkun.common.utils.T;
-import me.jinkun.opennews.domain.NewsAds;
-import me.jinkun.opennews.domain.NewsTopic;
-import me.jinkun.opennews.helper.Bus;
+import me.jinkun.opennews.data.domain.NewsAds;
+import me.jinkun.opennews.data.domain.NewsTopic;
+import me.jinkun.opennews.util.Bus;
 import me.jinkun.opennews.widgets.NetworkImageHolderView;
 
 /**

@@ -2,9 +2,9 @@ package me.jinkun.opennews.features.news.presenter;
 
 import me.jinkun.common.utils.L;
 import me.jinkun.opennews.base.presenter.AbsBasePresenter;
-import me.jinkun.opennews.domain.NewsDetail;
-import me.jinkun.opennews.domain.NewsTopic;
-import me.jinkun.opennews.features.news.model.NewsDetailModel;
+import me.jinkun.opennews.data.domain.NewsDetail;
+import me.jinkun.opennews.data.domain.NewsTopic;
+import me.jinkun.opennews.data.model.NewsDetailModel;
 import me.jinkun.opennews.features.news.view.INewsDetailView;
 import rx.Observable;
 import rx.Subscriber;

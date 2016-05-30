@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
 import me.jinkun.common.listview.holder.BaseHolder;
 import me.jinkun.common.utils.DensityUtil;
 import me.jinkun.opennews.R;
-import me.jinkun.opennews.domain.NewsTopic;
+import me.jinkun.opennews.data.domain.NewsTopic;
 import me.jinkun.opennews.features.news.presenter.NewsTopicPresenter;
 
 /**

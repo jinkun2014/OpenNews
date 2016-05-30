@@ -1,4 +1,4 @@
-package me.jinkun.opennews.helper;
+package me.jinkun.opennews.util;
 
 import org.simple.eventbus.EventBus;
 

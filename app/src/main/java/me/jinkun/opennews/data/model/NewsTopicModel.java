@@ -1,4 +1,4 @@
-package me.jinkun.opennews.features.news.model;
+package me.jinkun.opennews.data.model;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,9 +9,9 @@ import me.jinkun.common.utils.L;
 import me.jinkun.common.utils.SPUtil;
 import me.jinkun.opennews.base.MyApp;
 import me.jinkun.opennews.base.model.AbsModel;
-import me.jinkun.opennews.domain.NewsTopic;
-import me.jinkun.opennews.network.ApiServiceManager;
-import me.jinkun.opennews.network.interfs.INewsTopicApi;
+import me.jinkun.opennews.data.domain.NewsTopic;
+import me.jinkun.opennews.data.network.ApiServiceManager;
+import me.jinkun.opennews.data.network.interfs.INewsTopicApi;
 import retrofit2.Call;
 import retrofit2.Response;
 

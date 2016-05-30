@@ -1,4 +1,4 @@
-package me.jinkun.opennews.network;
+package me.jinkun.opennews.data.network;
 
 /**
  * Description: Do one thing at a time, and do well.

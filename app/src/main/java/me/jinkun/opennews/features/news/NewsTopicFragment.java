@@ -15,12 +15,12 @@ import me.jinkun.common.utils.L;
 import me.jinkun.common.widgets.MultiStateView;
 import me.jinkun.opennews.R;
 import me.jinkun.opennews.base.fragment.MVPBaseFragment;
-import me.jinkun.opennews.domain.NewsTopic;
+import me.jinkun.opennews.data.domain.NewsTopic;
 import me.jinkun.opennews.features.news.adapter.NewsTopicAdapter;
-import me.jinkun.opennews.features.news.bean.NewsChannel;
+import me.jinkun.opennews.data.domain.NewsChannel;
 import me.jinkun.opennews.features.news.presenter.NewsTopicPresenter;
 import me.jinkun.opennews.features.news.view.INewsTopicView;
-import me.jinkun.opennews.helper.Bus;
+import me.jinkun.opennews.util.Bus;
 
 /**
  * Description: Do one thing at a time, and do well.<br/>

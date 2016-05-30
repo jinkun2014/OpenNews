@@ -1,4 +1,4 @@
-package me.jinkun.opennews.features.news.model;
+package me.jinkun.opennews.data.model;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -13,7 +13,7 @@ import me.jinkun.common.utils.SPUtil;
 import me.jinkun.opennews.base.MyApp;
 import me.jinkun.opennews.base.model.AbsModel;
 import me.jinkun.opennews.constant.C;
-import me.jinkun.opennews.features.news.bean.NewsChannel;
+import me.jinkun.opennews.data.domain.NewsChannel;
 
 /**
  * Description: Do one thing at a time, and do well.<br/>

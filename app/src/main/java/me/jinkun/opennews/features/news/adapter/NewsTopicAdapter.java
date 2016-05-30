@@ -6,8 +6,8 @@ import java.util.List;
 
 import me.jinkun.common.listview.adapter.ListBaseAdapter;
 import me.jinkun.common.listview.holder.BaseHolder;
-import me.jinkun.opennews.domain.NewsTopic;
-import me.jinkun.opennews.features.news.bean.NewsChannel;
+import me.jinkun.opennews.data.domain.NewsTopic;
+import me.jinkun.opennews.data.domain.NewsChannel;
 import me.jinkun.opennews.features.news.holder.HeaderBannerHolder;
 import me.jinkun.opennews.features.news.holder.NewsTopicHolder;
 import me.jinkun.opennews.features.news.presenter.NewsTopicPresenter;

@@ -1,10 +1,10 @@
-package me.jinkun.opennews.database;
+package me.jinkun.opennews.data.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import me.jinkun.opennews.database.dao.NewsChannelDao;
+import me.jinkun.opennews.data.database.dao.NewsChannelDao;
 
 public class SQLHelper extends SQLiteOpenHelper {
     public static final String DB_NAME = "database.db";// 数据库名称

@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import me.jinkun.opennews.R;
-import me.jinkun.opennews.domain.NewsAds;
+import me.jinkun.opennews.data.domain.NewsAds;
 import com.bigkoo.convenientbanner.holder.Holder;
 import com.squareup.picasso.Picasso;
 

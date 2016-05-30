@@ -1,4 +1,4 @@
-package me.jinkun.opennews.domain;
+package me.jinkun.opennews.data.domain;
 
 import java.io.Serializable;
 

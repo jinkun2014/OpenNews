@@ -1,4 +1,4 @@
-package me.jinkun.opennews.database.dao;
+package me.jinkun.opennews.data.database.dao;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-import me.jinkun.opennews.database.DBUtil;
-import me.jinkun.opennews.features.news.bean.NewsChannel;
+import me.jinkun.opennews.data.database.DBUtil;
+import me.jinkun.opennews.data.domain.NewsChannel;
 
 /**
  * Description: Do one thing at a time, and do well.<br/>

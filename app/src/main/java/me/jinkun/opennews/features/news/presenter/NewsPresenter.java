@@ -5,8 +5,8 @@ import java.util.List;
 
 import me.jinkun.opennews.base.presenter.AbsBasePresenter;
 import me.jinkun.opennews.features.news.NewsTopicFragment;
-import me.jinkun.opennews.features.news.bean.NewsChannel;
-import me.jinkun.opennews.features.news.model.NewsChannelModel;
+import me.jinkun.opennews.data.domain.NewsChannel;
+import me.jinkun.opennews.data.model.NewsChannelModel;
 import me.jinkun.opennews.features.news.view.INewsView;
 import rx.Observable;
 import rx.Subscriber;
